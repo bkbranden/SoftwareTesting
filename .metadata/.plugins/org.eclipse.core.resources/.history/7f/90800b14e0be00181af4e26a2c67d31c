@@ -1,0 +1,40 @@
+package assignment3;
+
+public class Stack<T> {
+	
+	
+	public Stack() {
+		
+	}
+	
+	private StackNode<T> top;
+
+	public StackNode<T> peek() {
+		if(top == null) {
+			throw new EmptyStackException();
+		}
+		return top;
+	}
+	
+	public StackNode<T> pop() {
+		StackNode<T> item = top;
+		top = top.next;
+		return item;
+	}
+	
+	public void push(StackNode<T> node) {
+		node.next = top;
+		top = node;
+	}
+	
+	public boolean isEmpty() {
+		if (top == null) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+
+

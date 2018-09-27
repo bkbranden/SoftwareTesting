@@ -1,0 +1,22 @@
+package assignment3;
+
+public class Stack<T> {
+	
+	
+	public Stack() {
+		
+	}
+	
+	private StackNode<T> top;
+
+	public T peek() {
+		return top.getData();
+	}
+	
+	public T pop() {
+		T item = top.getData();
+		top = top.next;
+	}
+}
+
+

@@ -1,0 +1,21 @@
+package assignment3;
+
+public class Stack<T> {
+	
+	
+	public Stack() {
+		
+	}
+	
+	private StackNode<T> top;
+
+}
+
+public class StackNode<T>{
+	private T data;
+	private StackNode<T> next;
+	
+	public StackNode(T data) {
+		this.data = data;
+	}
+}

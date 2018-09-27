@@ -1,0 +1,14 @@
+package assignment3;
+
+public class Stack<T> {
+	
+	
+	public Stack() {
+		
+	}
+	
+	private StackNode<T> top;
+
+}
+
+

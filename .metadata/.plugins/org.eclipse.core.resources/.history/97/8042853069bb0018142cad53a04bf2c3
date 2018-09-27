@@ -1,0 +1,21 @@
+package testingtemplate;
+
+public class Template {
+	private String name;
+	private String templ;
+	private String templateText;
+	
+	public Template(String templ, String s) {
+		this.name = s;
+		this.templ = templ;
+		
+	}
+	
+	public void set(String var, String val) {
+		this.name = val;
+	}
+	
+	public String evaluate() {
+		return templ + ", " + name;
+	}
+}

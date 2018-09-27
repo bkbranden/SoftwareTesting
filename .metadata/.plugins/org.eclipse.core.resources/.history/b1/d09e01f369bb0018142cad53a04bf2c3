@@ -1,0 +1,26 @@
+package testingtemplate;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Template {
+	private String name;
+	private String templ;
+	private Map<String, String> variables;
+	
+	public Template(String templ) {
+		this.templ = templ;
+		this.variables = new HashMap<String, String>();
+		
+	}
+	
+	public void set(String var, String val) {
+		this.name = val;
+	}
+	
+	public String evaluate() {
+		return templ.replaceAll("\\$\\{name\\}", name);
+	}
+	
+	
+}
